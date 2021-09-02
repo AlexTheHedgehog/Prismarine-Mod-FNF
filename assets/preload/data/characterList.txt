@@ -1,8 +1,5 @@
 bf
-bf-car
 gf
 prismabf
-cops
-cops-car
-mom
+cop
 mom-car

@@ -35,7 +35,7 @@ class StoryMenuState extends MusicBeatState
 	public static var weekUnlocked:Array<Bool> = [];
 
 	var weekCharacters:Array<Dynamic> = [
-		['cops', 'prismabf', 'gf'],
+		['mom', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/weekNames'));

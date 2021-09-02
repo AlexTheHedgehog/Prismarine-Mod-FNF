@@ -383,56 +383,38 @@ class Character extends FlxSprite
 			case 'prismabf':
 				var tex = Paths.getSparrowAtlas('prismabf','shared',true);
 				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-				animation.addByIndices('idleHair', 'BF idle dance', [10, 11, 12, 13], "", 24, true);
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'BF Up', 24, false);
+				animation.addByPrefix('singLEFT', 'BF Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF Right', 24, false);
+				animation.addByPrefix('singDOWN', 'BF Down', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF Up MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF Left MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF Right MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF Down MISS', 24, false);
 
-				animation.addByPrefix('singUP-alt', 'PRISMA NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'PRISMA NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'PRISMA NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'PRISMA NOTE DOWN0', 24, false);
-				animation.addByPrefix('singUPmiss-alt', 'PRISMA NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss-alt', 'PRISMA NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss-alt', 'PRISMA NOTE RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss-alt', 'PRISMA NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('singUP-alt', 'P Up', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'P Left', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'P Right', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'P Down', 24, false);
+				animation.addByPrefix('singUPmiss-alt', 'P Up MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss-alt', 'P Left MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss-alt', 'P Right MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss-alt', 'P Down MISS', 24, false);
 
 				loadOffsetFile(curCharacter);
 				playAnim('idle');
-			case 'cops':
-				tex = Paths.getSparrowAtlas('cops','shared',true);
+
+				flipX = true;
+			case 'cop':
+				tex = Paths.getSparrowAtlas('cop','shared',true);
 				frames = tex;
 
-				animation.addByPrefix('idle', "Mom Idle", 24, false);
-				animation.addByPrefix('singUP', "Mom Up Pose", 24, false);
-				animation.addByPrefix('singDOWN', "MOM DOWN POSE", 24, false);
-				animation.addByPrefix('singLEFT', 'Mom Left Pose', 24, false);
-				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
-				// CUZ DAVE IS DUMB!
-				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
-
-				loadOffsetFile(curCharacter);
-
-				playAnim('idle');
-
-			case 'cops-car':
-				tex = Paths.getSparrowAtlas('copsCar','shared',true);
-				frames = tex;
-
-				animation.addByPrefix('idle', "Mom Idle", 24, false);
-				animation.addByPrefix('singUP', "Mom Up Pose", 24, false);
-				animation.addByPrefix('singDOWN', "MOM DOWN POSE", 24, false);
-				animation.addByPrefix('singLEFT', 'Mom Left Pose', 24, false);
-				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
-				// CUZ DAVE IS DUMB!
-				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
-				animation.addByIndices('idleHair', 'Mom Idle', [10, 11, 12, 13], "", 24, true);
+				animation.addByPrefix('idle', "Idol", 24, false);
+				animation.addByPrefix('singUP', "Up", 24, false);
+				animation.addByPrefix('singDOWN', "Down", 24, false);
+				animation.addByPrefix('singLEFT', 'Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Right', 24, false);
 
 				loadOffsetFile(curCharacter);
 

@@ -108,7 +108,7 @@ class Stage
 						swagBacks['skyBG'] = skyBG;
                         toAdd.push(skyBG);
 
-						var bgLimo:FlxSprite = new FlxSprite(-200, 480);
+						var bgLimo:FlxSprite = new FlxSprite(-100, 480);
 						bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo', 'week4');
 						bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
 						bgLimo.animation.play('drive');
@@ -164,73 +164,6 @@ class Stage
                         // hideLastBG = true;
                         // slowBacks[40] = [limo];
                         // slowBacks[120] = [limo, bgLimo, skyBG, fastCar];
-					}
-				case 'chase':
-					{
-						camZoom = 0.90;
-
-						var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('limo/chaseSunset', 'week4'));
-						skyBG.scrollFactor.set(0.1, 0.1);
-						skyBG.antialiasing = FlxG.save.data.antialiasing;
-						swagBacks['skyBG'] = skyBG;
-						toAdd.push(skyBG);
-
-						var bgLimo:FlxSprite = new FlxSprite(-200, 480);
-						bgLimo.frames = Paths.getSparrowAtlas('limo/bgChase', 'week4');
-						bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
-						bgLimo.animation.play('drive');
-						bgLimo.scrollFactor.set(0.4, 0.4);
-						bgLimo.antialiasing = FlxG.save.data.antialiasing;
-						swagBacks['bgLimo'] = bgLimo;
-						toAdd.push(bgLimo);
-						
-						var fastCar:FlxSprite;
-						fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('limo/fastCarLol', 'week4'));
-						fastCar.antialiasing = FlxG.save.data.antialiasing;
-
-						if (FlxG.save.data.distractions)
-						{
-							var grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
-							swagGroup['grpLimoDancers'] = grpLimoDancers;
-							toAdd.push(grpLimoDancers);
-
-							for (i in 0...5)
-							{
-								var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
-								dancer.scrollFactor.set(0.4, 0.4);
-								grpLimoDancers.add(dancer);
-								swagBacks['dancer' + i] = dancer;
-							}
-
-							swagBacks['fastCar'] = fastCar;
-							layInFront[2].push(fastCar);
-						}
-
-						var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/chaseOverlay', 'week4'));
-						overlayShit.alpha = 0.5;
-						// add(overlayShit);
-
-						// var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
-
-						// FlxG.camera.setFilters([new ShaderFilter(cast shaderBullshit.shader)]);
-
-						// overlayShit.shader = shaderBullshit;
-
-						var limoTex = Paths.getSparrowAtlas('limo/chaseDrive', 'week4');
-
-						var limo = new FlxSprite(-120, 550);
-						limo.frames = limoTex;
-						limo.animation.addByPrefix('drive', "Limo stage", 24);
-						limo.animation.play('drive');
-						limo.antialiasing = FlxG.save.data.antialiasing;
-						layInFront[0].push(limo);
-						swagBacks['limo'] = limo;
-
-						// Testing 
-						//
-						// hideLastBG = true;
-						// slowBacks[40] = [limo];
-						// slowBacks[120] = [limo, bgLimo, skyBG, fastCar];
 					}
 				case 'mall':
 					{
