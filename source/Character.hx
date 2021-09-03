@@ -404,8 +404,6 @@ class Character extends FlxSprite
 
 				loadOffsetFile(curCharacter);
 				playAnim('idle');
-
-				flipX = true;
 			case 'cop':
 				tex = Paths.getSparrowAtlas('cop','shared',true);
 				frames = tex;

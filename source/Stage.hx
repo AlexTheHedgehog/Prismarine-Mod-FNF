@@ -108,7 +108,7 @@ class Stage
 						swagBacks['skyBG'] = skyBG;
                         toAdd.push(skyBG);
 
-						var bgLimo:FlxSprite = new FlxSprite(-100, 480);
+						var bgLimo:FlxSprite = new FlxSprite(-200, 480);
 						bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo', 'week4');
 						bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
 						bgLimo.animation.play('drive');
@@ -151,7 +151,7 @@ class Stage
 
 						var limoTex = Paths.getSparrowAtlas('limo/limoDrive', 'week4');
 
-						var limo = new FlxSprite(-120, 550);
+						var limo = new FlxSprite(-100, 550);
 						limo.frames = limoTex;
 						limo.animation.addByPrefix('drive', "Limo stage", 24);
 						limo.animation.play('drive');

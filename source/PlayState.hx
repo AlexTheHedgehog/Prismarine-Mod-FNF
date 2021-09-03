@@ -648,6 +648,10 @@ class PlayState extends MusicBeatState
 					dad.x -= 150;
 					dad.y += 100;
 					camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+				case 'cop':
+					camPos.x += 650;
+					camPos.y += 100;
+					dad.y += 200;
 			}
 
 			// REPOSITIONING PER STAGE
@@ -655,8 +659,8 @@ class PlayState extends MusicBeatState
 				switch (Stage.curStage)
 				{
 					case 'limo':
-						boyfriend.y -= 220;
-						boyfriend.x += 260;
+						boyfriend.y -= 245;
+						boyfriend.x -= 35;
 						if (FlxG.save.data.distractions)
 						{
 							resetFastCar();
@@ -2717,7 +2721,8 @@ class PlayState extends MusicBeatState
 				switch (Stage.curStage)
 				{
 					case 'limo':
-						camFollow.x = boyfriend.getMidpoint().x - 300;
+						camFollow.x = boyfriend.getMidpoint().x - 550;
+						camFollow.y = boyfriend.getMidpoint().y + 5;
 					case 'mall':
 						camFollow.y = boyfriend.getMidpoint().y - 200;
 					case 'school':
